@@ -1,0 +1,114 @@
+<div ng-controller="plistController">
+  <nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="#">Ministry of Shipping</a>
+    <ul class="nav navbar-nav pull-right">    
+      <li class="nav-item">
+        <a class="nav-link" href="#">Welcome , User Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Logout</a>
+      </li>    
+    </ul>  
+  </nav>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">View All Projects</a>
+      </div>
+      <ul class="nav navbar-nav pull-right">
+        <li><a>Generate Report</a></li>
+        <li><a>Download Excel</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="prlist" style="margin:2%;background-color: #f8f8f8;">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <select ng-model="selectedPname">
+              <option value="">By Project Name</option>
+              <option ng-repeat="x in projectName">{{x}}</option>
+            </select>
+
+            <select ng-model="selectedPort">
+              <option value="">All Port</option>
+              <option ng-repeat="x in concernedPort">{{x}}</option>
+            </select>
+
+            <select ng-model="selectedTheme">
+              <option value="">All Theme</option>
+              <option ng-repeat="x in theme">{{x}}</option>
+            </select>
+
+            <select ng-model="selectedPcat">
+              <option value="">Categories</option>
+              <option ng-repeat="x in projectCateogry">{{x}}</option>
+            </select>
+
+            <select ng-model="selectedpPstate">
+              <option value="">State (All)</option>
+              <option ng-repeat="x in concernedState">{{x}}</option>
+            </select>
+
+            <select ng-model="selectedPstatus">
+              <option value="">Status</option>
+              <option ng-repeat="x in pstatus">{{x}}</option>
+            </select>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"></div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </div>
+    </nav>
+    <div>
+      <table class="table table-sm table-hover">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Project I.D</th>
+            <th>Project Name</th>
+            <th>Year of consideration</th>
+            <th>Construction time(years)</th>
+            <th>Cost(INR Cr)</th>
+            <th>Units (Kms/Mta/etc)</th>
+            <th>Project Theme</th>
+            <th>Project Category</th>
+            <th>Concerned Port</th>
+            <th>Implementing Agency</th>
+            <th>Concerned State</th>
+            <th>Project Status</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="project in projectList | filter:{theme: selectedTheme} | filter:{projectName: selectedPname} | filter:{concernedPort: selectedPort} | filter:{projectCateogry: selectedPcat} | filter:{concernedState: selectedpPstate}">
+          <tr>
+            <th scope="row">{{project.sn}}</th>
+            <td>{{project.projectId}}</td>
+            <td><a data="{{project.projectId}}" ng-click="projectDetails(project.projectId)" href="#/project/">{{project.projectName}}</a></td>
+            <td>2016</td>
+            <td>2 year</td>
+            <td>1 lac</td>
+            <td>unit</td>
+            <td>{{project.theme}}</td>
+            <td>{{project.projectCateogry}}</td>
+            <td>{{project.concernedPort}}</td>
+            <td>{{project.implementingAgency}}</td>
+            <td>{{project.concernedState}}</td>
+            <td>{{project.status}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- /.prlist -->
+</div>

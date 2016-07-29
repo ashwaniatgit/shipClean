@@ -1,0 +1,68 @@
+[
+ {
+ "sn":1,
+ "projectName":"LPG Import Terminal at Kandla",
+ "projectId":"PM334",
+ "theme":"PM",
+ "projectCateogry":"Port Modernization - Major Ports",
+ "concernedPort":"Kandla",
+ "implementingAgency":"Kandla Port Trust",
+ "concernedState":"Gujarat",
+ "status":"IL1"
+ },
+ {
+ "sn":2,
+ "projectName":"LNG Import Terminal at Ennore",
+ "projectId":"PM333",
+ "theme":"PM",
+ "projectCateogry":"Port Modernization - Major Ports",
+ "concernedPort":"Ennore",
+ "implementingAgency":"Kamarajar Port Limited",
+ "concernedState":"Tamil Nadu",
+ "status":"IL2"
+ },
+ {
+ "sn":3,
+ "projectName":"LNG Import Terminal at Kakinada",
+ "projectId":"PM332",
+ "theme":"PLI",
+ "projectCateogry":"Port Modernization - Non Major Ports",
+ "concernedPort":"Kakinada",
+ "implementingAgency":"AP Port Dept",
+ "concernedState":"Andhra Pradesh",
+ "status":"IL3"
+ },
+ {
+ "sn":4,
+ "projectName":"Development of Gujarat Maritime University",
+ "projectId":"CCD277",
+ "theme":"CCD",
+ "projectCateogry":"CCD Other Projects",
+ "concernedPort":"Gujarat",
+ "implementingAgency":"Gujarat Maritime Board",
+ "concernedState":"Gujarat",
+ "status":"IL4"
+ },
+ {
+ "sn":5,
+ "projectName":"LPG Import Terminal at Eastern ports",
+ "projectId":"PM330",
+ "theme":"PM",
+ "projectCateogry":"Port Modernization - Major Ports",
+ "concernedPort":"Haldia, Paradip, Dhamra",
+ "implementingAgency":"Haldia- Kolkata Port Trust",
+ "concernedState":"West Bengal, Odisha",
+ "status":"IL5"
+ },
+ {
+ "sn":6,
+ "projectName":"Expressway from Ahmedabad to JNPT",
+ "projectId":"PC329",
+ "theme":"PC",
+ "projectCateogry":"Expressways Projects",
+ "concernedPort":"JNPT",
+ "implementingAgency":"NHAI",
+ "concernedState":"Maharashtra",
+ "status":"IL1"
+ }
+]

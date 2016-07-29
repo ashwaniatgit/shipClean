@@ -1,1 +1,28 @@
-<h1>Hi Admin </h1>
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="shipApp">
+<head>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/jquery-1.12.0.min.js"></script>
+    <script src="components/hiChart/highcharts.js"></script>
+    <script src="components/hiChart/exporting.js"></script>
+    <script src="components/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/bootstrap/css/simple-sidebar.css">
+    <script src="app/index.route.js"></script>
+    <script src="app/services/data.service.js"></script>
+    <script src="app/services/projectproperties.service.js"></script>
+    <script src="app/controllers/main.controller.js"></script>
+    <script src="app/controllers/login.controller.js"></script>
+    <script src="app/controllers/plist.controller.js"></script>
+    <script src="app/controllers/chart.controller.js"></script>
+    <!-- <script src="app/controllers/pdetails.controller.js"></script> -->
+    <script src="app/directives/chart.directive.js"></script>
+
+</head>
+<body ng-controller = "mainController">
+    <!-- MAIN CONTENT AND INJECTED VIEWS --> 
+    <div ng-view></div>
+</body>
+</html>

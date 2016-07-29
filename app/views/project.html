@@ -1,0 +1,103 @@
+<div>
+  <nav class="navbar navbar-light bg-faded">
+    <a class="navbar-brand" href="#">Ministry of Shipping</a>
+    <ul class="nav navbar-nav pull-right">      
+      <li class="nav-item">
+        <a class="nav-link" href="#">Welcome , User Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Logout</a>
+      </li>      
+    </ul>    
+  </nav>
+  <div class="row" style="margin:auto;">
+    <div class="col-md-12">
+      
+      <table class="table table-hover">
+        <caption style="background:#b2d9ed;">
+          <strong>Project Description</strong>
+          <span style="float:right">
+            <button ng-click="ShowHide()" class="btn btn-default btn-sm active" style="float:right">edit</button>
+          </span>
+        </caption>
+        <tbody>
+
+        <tr>
+          <td>Project Name</td>
+          <td>{{pdname}}</td>
+          <td>&nbsp</td>
+          <td>Concerned Port</td>
+          <td>{{pdport}}</td>
+        </tr>
+        
+        <tr>
+        <td>State</td>
+        <td>{{pdstate}}</td>
+        <td>&nbsp</td>
+        <td>Implementing Agency</td>
+        <td>{{pdagency}}</td>
+        </tr>
+        
+        <tr>
+          <td>Project ID</td>
+          <td>{{pdid}}</td>
+          <td>&nbsp</td>
+          <td>Project Theme</td>
+          <td>{{pdtheme}}</td>
+        </tr>
+      
+        <tr>
+        <td>Project Cateogry</td>
+        <td>{{pdcat}}</td>
+        <td>&nbsp</td>
+        <td>Project Status</td>
+        <td>{{pdstatus}}</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+  </div>
+
+  <div class="row" style="margin:auto;" ng-show="IsVisible">
+    <div class="col-md-12">
+      <table class="table table-hover">
+        <caption style="background:#b2d9ed;"><strong>Edit Project Description</strong></caption>
+        <tbody>
+        <tr>
+          <td>Project Name</td>
+          <td><input type="text" value="{{pdname}}"></td>
+          <td>&nbsp</td>
+          <td>Concerned Port</td>
+          <td><input type="text" value="{{pdport}}"></td>
+        </tr>
+        
+        <tr>
+        <td>State</td>
+        <td><input type="text" value="{{pdstate}}"></td>
+        <td>&nbsp</td>
+        <td>Implementing Agency</td>
+        <td><input type="text" value="{{pdagency}}"></td>
+        </tr>
+        
+        <tr>
+          <td>Project ID</td>
+          <td><input type="text" value="{{pdid}}"></td>
+          <td>&nbsp</td>
+          <td>Project Theme</td>
+          <td><input type="text" value="{{pdtheme}}"></td>
+        </tr>
+      
+        <tr>
+        <td>Project Cateogry</td>
+        <td><input type="text" value="{{pdcat}}"></td>
+        <td>&nbsp</td>
+        <td>Project Status</td>
+        <td><input type="text" value="{{pdstatus}}"></td>
+        </tr>
+        </tbody>
+        </table>
+        <button class="btn btn-default btn-sm active" style="float:right">Add new</button>
+        <button class="btn btn-default btn-sm active" style="float:right; margin-right:5px;">Save edit</button>
+    </div>
+  </div>
+</div>
