@@ -1,4 +1,4 @@
-var shipApp = angular.module('shipApp', ['ngRoute']);
+var shipApp = angular.module('shipApp', ['ngRoute', 'ngCookies']);
 
 // configure routes
 shipApp.config(function ($routeProvider) {
